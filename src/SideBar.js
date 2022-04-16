@@ -1,7 +1,7 @@
 
-import { Inbox,Star, AccessTime, LabelImportant, NearMe, Note, ExpandMore } from '@mui/icons-material';
+import { Inbox,Star, AccessTime, LabelImportant, NearMe, Note, ExpandMore, Person, Duo, Phone } from '@mui/icons-material';
 import AddIcon from '@mui/icons-material/Add';
-import { Button } from '@mui/material';
+import { Button, IconButton } from '@mui/material';
 import React from 'react';
 import './SideBar.css';
 import SideBarOption from './SideBarOption';
@@ -23,6 +23,20 @@ const SideBar = () => {
       <SideBarOption Icon={NearMe} title={'Sent'} number={10}/>
       <SideBarOption Icon={Note} title={'Draft'} number={20}/>
       <SideBarOption Icon={ExpandMore} title={'More'} number={10}/>
+
+      <div className="sidebar-footer">
+        <div className="sidebar-footerIcons">
+          <IconButton>
+            <Person />
+          </IconButton>
+          <IconButton>
+            <Duo />
+          </IconButton>
+          <IconButton>
+            <Phone />
+          </IconButton>
+        </div>
+      </div>
     </div>
   )
 }
