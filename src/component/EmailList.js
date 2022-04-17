@@ -1,4 +1,4 @@
-import { ArrowDropDown, ChevronLeft, ChevronRight, Inbox, KeyboardHide, MoreVert, People, Redo, Settings } from '@mui/icons-material';
+import { ArrowDropDown, ChevronLeft, ChevronRight, Inbox, KeyboardHide, LocalOffer, MoreVert, People, Redo, Settings } from '@mui/icons-material';
 import { Checkbox, IconButton } from '@mui/material';
 import React from 'react';
 import '../component/EmailList.css';
@@ -40,7 +40,7 @@ function EmailList() {
       <div className="emailList__sections">
         <Section Icon={Inbox} title='Primary' color='red' selected />
         <Section Icon={People} title='Social' color='blue'  />
-        <Section Icon={Inbox} title='Promotions' color='green'  />
+        <Section Icon={LocalOffer} title='Promotions' color='green'  />
       </div>
 
       <div className="emailList__list">
