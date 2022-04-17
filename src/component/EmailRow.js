@@ -1,14 +1,28 @@
 import { LabelImportantOutlined, StarBorderOutlined } from '@mui/icons-material'
 import { Checkbox, IconButton } from '@mui/material'
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import { selectMail } from '../features/mailSlice';
 import './EmailRow.css';
 
 function EmailRow({title,subject,description,time,id}) {
-
+  const dispatch = useDispatch();
   const history = useHistory();
+
+  const openMail = () =>  {
+    dispatch(selectMail({
+      id,
+      title,
+      subject,
+      description,
+      time
+      
+    }));
+    history.push('/mail')
+  }
   return (
-    <div onClick={()=>history.push('/mail')} className='emailRow'> 
+    <div onClick={openMail} className='emailRow'> 
       <div className="emailRow__options">
         <Checkbox />
         <IconButton>
